@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="items">
+        <ul>
+            <li>item1</li>
+        </ul>
+    </div>
+    <input type="text" id="addnewitem">
+    <button onclick="additem()">AddNewItem</button>
+    <script>
+        function additem() {
+            let text = document.getElementById("addnewitem");
+            let item = document.querySelector("ul");
+            if (text.length === 0) {
+                return;
+            }
+            item.innerHTML += "<li>" + text.value + "</li>";
+            text.value = "";
+
+        }
+
+    </script>
+</body>
+
+</html>

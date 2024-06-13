@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: rgba(52, 2, 113, 0.553);
+        }
+
+        select {
+            border: none;
+            font-size: large;
+            outline: none;
+        }
+
+        button {
+            border: none;
+            font-size: large;
+            font-weight: lighter;
+        }
+
+        option {
+            /* background-color: rgb(254, 233, 251); */
+            background: yellow;
+            margin: 20px;
+            padding: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="items">
+        <h1>Assignees</h1>
+        <select id="assignee" onchange="visible()">
+            <option value="Unassigned">UnAssigned</option>
+            <option value="value1">Value 1</option>
+            <option value="value2">Value 2</option>
+            <option value="value3">Value 3</option>
+            <option value="value4">Value 4</option>
+            <option value="value5">Value 5</option>
+        </select>
+        <button id="b">X</button>
+    </div>
+</body>
+<script>
+    function visible() {
+        let selectedValue = document.getElementById("assignee").value;
+        let x = document.getElementById("b");
+        if (selectedValue === "Unassigned") {
+            x.style.visibility = "hidden"
+        } else {
+            x.style.visibility = "visible"
+        }
+    }
+
+    document.getElementById("b").addEventListener("click", function clear() {
+        document.getElementById("assignee").value = "Unassigned";
+        visible();
+    });
+
+    visible();
+</script>
+
+</html>

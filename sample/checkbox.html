@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #check {
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: rgb(196, 226, 252);
+            position: absolute;
+            top: 350px;
+            left: 50%;
+        }
+
+        div {
+            background-color: black;
+            height: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="b">
+        <input type="checkbox" onclick="change()" id="check">
+    </div>
+    <script>
+        function change() {
+            let c = document.getElementById("b");
+            if (c.style.backgroundColor === "black" || c.style.backgroundColor === "") {
+                c.style.backgroundColor = "white";
+            } else {
+                c.style.backgroundColor = "black";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

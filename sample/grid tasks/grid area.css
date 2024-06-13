@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+}
+
+#box1 {
+    grid-area: box1;
+    background-color: red;
+
+}
+
+#box2 {
+    grid-area: box2;
+    background-color: aqua;
+}
+
+#box3 {
+    background-color: pink;
+    grid-area: box3;
+}
+
+#box4 {
+    background-color: orchid;
+    grid-area: box4;
+}
+
+
+#d {
+    display: grid;
+    grid-template-areas:
+        "box1 box2 box2"
+        "box3 box2 box2"
+        "box4 box4 box4";
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 200px;
+}

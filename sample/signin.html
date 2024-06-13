@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #open {
+            background-color: aliceblue;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            padding: 30px;
+        }
+
+        #close {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="open">
+        <div id="name">
+            name: <input type="text" id="input"><br><br>
+        </div>
+        <div>
+            <input type="button" value="Sign in" id="close" onclick="toggleLogin()">
+        </div>
+    </div>
+    <script>
+        function toggleLogin() {
+            let closeButton = document.querySelector("#close");
+            let text = document.querySelector("#name");
+            if (closeButton.value === "Sign in") {
+                if (document.getElementById("input").value.length === 0) {
+                    return;
+                }
+                closeButton.value = "Sign out";
+                text.innerHTML = "<h1>Welcome" + document.getElementById("input").value;
+            } else {
+                text.innerHTML = "name: <input type='text' id='input'><br><br>";
+                closeButton.value = "Sign in";
+                document.getElementById("input").value = " ";
+            }
+        }
+    </script>
+</body>
+
+</html>
