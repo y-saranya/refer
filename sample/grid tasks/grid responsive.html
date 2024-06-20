@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #box1 {
+            background-color: antiquewhite;
+        }
+
+        #box2 {
+            background-color: aqua;
+        }
+
+        #box3 {
+            background-color: aquamarine;
+        }
+
+        #box4 {
+            background-color: beige;
+        }
+
+        #container {
+            display: grid;
+            width: auto;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px 200px;
+        }
+
+        @media screen and (max-width:700px) {
+            #container {
+                grid-template-columns: 200px 200px;
+            }
+
+        }
+
+        @media screen and (max-width:400px) {
+            #container {
+                grid-template-columns: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+    </div>
+
+</body>
+
+</html>
